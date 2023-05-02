@@ -1,38 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Colors */
+:root {
+  --primary-color: #FFC300;
+--secondary-color: #FF5733;
+--accent-color: #C70039;
+--text-color: #212529;
+--background-color: #F9F9F9;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Design for first page, App.js */
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.form {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  width: 60%;
+  height: 80%;
+}
+
+.logo {
+  width: 20%;
+  object-fit: contain;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 36px;
+  color: var(--text-color);
+  margin: 0;
+  margin-top: 5%;
+  text-align: center;
+  font-weight: 300;
+}
+
+.heading p {
+  font-size: 18px;
+  color: var(--text-color);
+  margin: 0;
+  margin-top: 4%;
+}
+
+.button-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+}
+
+.button-selection button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.button-selection button:hover {
+  background-color: var(--secondary-color);
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-right: auto;
+}
+
+.step {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.active {
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+/* Design for beginner form */
+
+form {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  width: 60%;
+  min-height: 80%;
+  height: auto;
+}
+
+form h2{
+  font-size: 24px;
+  color: var(--text-color);
+  margin: 0;
+  margin-bottom: auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+form h3{
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+form label {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: row;
+}
+
+form div label{
+  display: inline-block;
+  width: 100px;
+  padding: 10px;
+  border: solid 2px #ccc;
+  transition: all 0.3s;
+  background-color: rgb(216, 216, 216);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 13px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form div label:hover {
+  border: 2px solid var(--secondary-color);
+}
+
+
+form input[type="radio"]:checked + label {
+  background-color: var(--primary-color);
+  color:var(--background-color)
+}
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+
+.back-next-button{
+  margin-left: auto;
+  margin-top: auto;
+  
+}
+
+
+.back-next-button button{
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.back-next-button button:hover{
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 980px) {
+  form h3{
+    font-size: 12px;
+  }
+
+  form h2{
+    font-size: 15px;
+  }
+
+  form div label{
+    font-size: 10px;
+    min-width: 70px;
+    width: auto;
+    height: 35px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  form h2{
+    margin-bottom: 10px;
+  }
+}
+
+.proform h2{
+  margin-bottom: 15px;
+}
+
+.amateurform h2{
+  margin-bottom: 15px;
+}
+
+/* Result */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Title */
+.result-title {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* List */
+.result-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: auto;
+  padding: 0;
+  max-width: 800px;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Item */
+.result-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  transition: all 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.result-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  background-color: var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Image */
+.result-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Info */
+.result-info {
+  width: 100%;
+  text-align: center;
+}
+
+/* Name */
+.result-name {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.result-price {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* Link */
+.result-link {
+  font-size: 18px;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.result-form .step-indicator{
+  margin-top: 20px;
 }
