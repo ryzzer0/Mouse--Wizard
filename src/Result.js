@@ -70,7 +70,7 @@ function Result({ steps, filters }) {
           <div className="result-info">
             <div className="result-name">Name: {mouse.name}</div>
             <div className="result-price">Price: {mouse.price}</div>
-            <div className="result-link">Amazon Link: <a href={mouse.link}>Buy now!</a></div>
+            <div className="result-link">Amazon Link: <a href={mouse.link} target="_blank" rel="noopener noreferrer">Buy now!</a></div>
           </div>
             </li>
           ))}
