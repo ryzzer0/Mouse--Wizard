@@ -16,7 +16,7 @@ Mouse Wizard is built using the following technologies:
 ## Installation
 To install Mouse Wizard on your machine, follow these steps:
 
-* Clone the repository: git clone https://github.com/ryzzer0/mouse-wizard.git
+* Clone the repository: git clone https://github.com/ryzzer0/Mouse--Wizard.git
 * Navigate to the project directory: cd mouse-wizard
 * Install the dependencies: npm install
 * Start the server: npm run server
